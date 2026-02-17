@@ -149,25 +149,46 @@
           <h2>Delivered in active environments with strict safety and schedule windows.</h2>
         </div>
         <div class="projects-grid">
-          <article class="project-card reveal" style="--project-image: url('https://images.pexels.com/photos/30790481/pexels-photo-30790481.jpeg?auto=compress&cs=tinysrgb&w=1200');">
+          <article
+            class="project-card reveal"
+            style="--project-image: url('assets/1.jpg');"
+            data-gallery-title="Industrial Plant - Pipe Rack Reinforcement"
+            data-gallery-images="assets/1.jpg|assets/3.jpg|assets/5.jpg"
+            data-gallery-captions="Pipe rack tie-in welding and fit-up.|Night shift outage work in progress.|Final inspected reinforcement before turnover."
+          >
             <div class="project-content">
               <p class="project-tag">Industrial Plant</p>
               <h3>Pipe Rack Reinforcement</h3>
               <p>Installed 42 tons of reinforcement during a scheduled outage without overrun.</p>
+              <button class="project-open" type="button">View Photo Gallery</button>
             </div>
           </article>
-          <article class="project-card reveal" style="--project-image: url('https://images.pexels.com/photos/15888227/pexels-photo-15888227.jpeg?auto=compress&cs=tinysrgb&w=1200');">
+          <article
+            class="project-card reveal"
+            style="--project-image: url('assets/3.jpg');"
+            data-gallery-title="Commercial Build - Multi-Level Stair Tower"
+            data-gallery-images="assets/3.jpg|assets/5.jpg|assets/1.jpg"
+            data-gallery-captions="Shop fabricated stair and landing assemblies.|Field installation and final fit-up on active site.|Completed steel package ready for punch closeout."
+          >
             <div class="project-content">
               <p class="project-tag">Commercial Build</p>
               <h3>Multi-Level Stair Tower</h3>
               <p>Fabricated and installed stair and landing assemblies with clean inspector sign-off.</p>
+              <button class="project-open" type="button">View Photo Gallery</button>
             </div>
           </article>
-          <article class="project-card reveal" style="--project-image: url('https://images.pexels.com/photos/28484182/pexels-photo-28484182.jpeg?auto=compress&cs=tinysrgb&w=1200');">
+          <article
+            class="project-card reveal"
+            style="--project-image: url('assets/5.jpg');"
+            data-gallery-title="Civil Infrastructure - Bridge Utility Walkway"
+            data-gallery-images="assets/5.jpg|assets/1.jpg|assets/3.jpg"
+            data-gallery-captions="Bridge-side welding setup and prep.|Structural welding during weather window.|Final walkway and handrail completion."
+          >
             <div class="project-content">
               <p class="project-tag">Civil Infrastructure</p>
               <h3>Bridge Utility Walkway</h3>
               <p>Completed high-wind field welding under an accelerated city timeline.</p>
+              <button class="project-open" type="button">View Photo Gallery</button>
             </div>
           </article>
         </div>
@@ -272,6 +293,24 @@
       <a href="#top">Back to Top</a>
     </div>
   </footer>
+
+  <div class="gallery-modal" id="project-gallery" aria-hidden="true">
+    <button class="gallery-backdrop" type="button" data-gallery-close aria-label="Close gallery"></button>
+    <div class="gallery-dialog" role="dialog" aria-modal="true" aria-labelledby="gallery-title">
+      <button class="gallery-close" type="button" data-gallery-close aria-label="Close gallery">&times;</button>
+      <p class="gallery-kicker">Project Gallery</p>
+      <h3 id="gallery-title"></h3>
+      <figure class="gallery-figure">
+        <img id="gallery-image" src="" alt="" />
+        <figcaption id="gallery-caption"></figcaption>
+      </figure>
+      <div class="gallery-controls">
+        <button type="button" class="gallery-nav" id="gallery-prev">Previous</button>
+        <p class="gallery-counter" id="gallery-counter">1 / 1</p>
+        <button type="button" class="gallery-nav" id="gallery-next">Next</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
