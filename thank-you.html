@@ -12,12 +12,45 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .thankyou-page {
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+    }
+
+    .thankyou-wrap {
+      width: min(760px, 92vw);
+      text-align: center;
+      background: #fff;
+      border: 1px solid rgba(168, 15, 21, 0.2);
+      border-radius: 1rem;
+      padding: 2rem 1.25rem;
+      box-shadow: 0 16px 40px rgba(16, 10, 11, 0.12);
+    }
+
+    .thankyou-wrap .section-head {
+      margin: 0;
+      text-align: center;
+    }
+
+    .thankyou-wrap .section-head p {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 60ch;
+    }
+
+    .thankyou-wrap .btn {
+      margin-top: 0.8rem;
+    }
+  </style>
 </head>
-<body>
+<body class="thankyou-page">
   <main>
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal visible">
+    <section>
+      <div class="thankyou-wrap">
+        <div class="section-head">
           <p class="eyebrow">Request Received</p>
           <h1>Thank you. Your message has been submitted.</h1>
           <p>Our team will review your request and contact you at the provided email or phone number.</p>
