@@ -15,47 +15,95 @@
   <style>
     .thankyou-page {
       min-height: 100dvh;
+      margin: 0;
       display: grid;
       place-items: center;
-      padding: 1rem;
+      padding: 1.25rem;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(198, 29, 36, 0.12), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(95, 16, 19, 0.12), transparent 36%),
+        linear-gradient(180deg, #fff8f8 0%, #fff2f2 100%);
     }
 
-    .thankyou-wrap {
-      width: min(760px, 92vw);
-      text-align: center;
-      background: #fff;
+    .thankyou-card {
+      width: min(780px, 94vw);
+      background: #ffffff;
       border: 1px solid rgba(168, 15, 21, 0.2);
-      border-radius: 1rem;
-      padding: 2rem 1.25rem;
-      box-shadow: 0 16px 40px rgba(16, 10, 11, 0.12);
-    }
-
-    .thankyou-wrap .section-head {
-      margin: 0;
+      border-radius: 1.2rem;
+      box-shadow: 0 22px 56px rgba(18, 10, 11, 0.16);
+      padding: clamp(1.4rem, 3vw, 2.2rem);
       text-align: center;
     }
 
-    .thankyou-wrap .section-head p {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 60ch;
+    .thankyou-logo-wrap {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 0.9rem;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #ffffff, #fff3f3);
+      border: 1px solid rgba(168, 15, 21, 0.22);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 12px 28px rgba(168, 15, 21, 0.12);
     }
 
-    .thankyou-wrap .btn {
-      margin-top: 0.8rem;
+    .thankyou-logo {
+      width: 66px;
+      height: auto;
+      display: block;
+    }
+
+    .thankyou-kicker {
+      margin: 0;
+      color: #a80f15;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.78rem;
+    }
+
+    .thankyou-title {
+      margin: 0.5rem 0 0.65rem;
+      color: #1e1112;
+      font-size: clamp(1.6rem, 4.2vw, 2.4rem);
+      line-height: 1.1;
+    }
+
+    .thankyou-text {
+      margin: 0 auto;
+      max-width: 62ch;
+      color: #4e3b3d;
+    }
+
+    .thankyou-contact {
+      margin-top: 0.75rem;
+      color: #5d474a;
+      font-size: 0.95rem;
+    }
+
+    .thankyou-contact a {
+      color: #a80f15;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .thankyou-action {
+      margin-top: 1.15rem;
     }
   </style>
 </head>
 <body class="thankyou-page">
   <main>
     <section>
-      <div class="thankyou-wrap">
-        <div class="section-head">
-          <p class="eyebrow">Request Received</p>
-          <h1>Thank you. Your message has been submitted.</h1>
-          <p>Our team will review your request and contact you at the provided email or phone number.</p>
-          <p><a class="btn btn-primary" href="/">Back to Home</a></p>
+      <div class="thankyou-card">
+        <div class="thankyou-logo-wrap" aria-hidden="true">
+          <img class="thankyou-logo" src="assets/logo.png" alt="" />
         </div>
+        <p class="thankyou-kicker">Request Received</p>
+        <h1 class="thankyou-title">Thank you. Your message has been submitted.</h1>
+        <p class="thankyou-text">Our team will review your request and contact you as soon as possible with next steps and schedule coordination.</p>
+        <p class="thankyou-contact">Need immediate support? Call <a href="tel:+13526788736">352-678-8736</a> or email <a href="mailto:info@jcweldingfabricationfl.com">info@jcweldingfabricationfl.com</a>.</p>
+        <p class="thankyou-action"><a class="btn btn-primary" href="/">Back to Home</a></p>
       </div>
     </section>
   </main>
