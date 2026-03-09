@@ -1,8 +1,6 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-nav");
 const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
-const form = document.querySelector(".contact-form");
-const formNote = document.querySelector(".form-note");
 const yearSlot = document.getElementById("year");
 
 if (yearSlot) {
@@ -69,15 +67,6 @@ if (sections.length && navLinks.length) {
   );
 
   sections.forEach((section) => sectionObserver.observe(section));
-}
-
-if (form && formNote) {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    formNote.textContent =
-      "Thanks. Your request has been received. We will contact you shortly.";
-    form.reset();
-  });
 }
 
 const projectCards = [...document.querySelectorAll(".project-card")];
