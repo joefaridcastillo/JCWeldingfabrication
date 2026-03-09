@@ -513,7 +513,7 @@ a {
 }
 
 .project-card::after {
-  background: linear-gradient(180deg, rgba(23, 12, 13, 0.18), rgba(23, 12, 13, 0.84));
+  background: linear-gradient(180deg, rgba(23, 12, 13, 0.08), rgba(23, 12, 13, 0.70));
 }
 
 .project-content {
@@ -539,6 +539,41 @@ a {
 .project-content p:last-of-type {
   margin-bottom: 0;
   color: rgba(255, 244, 245, 0.9);
+}
+
+.project-thumbs {
+  display: flex;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+}
+
+.project-thumb {
+  width: 64px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 180ms ease;
+}
+
+.project-thumb:hover img,
+.project-thumb:focus-visible img {
+  transform: scale(1.06);
+}
+
+.project-thumb:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
 .project-open {

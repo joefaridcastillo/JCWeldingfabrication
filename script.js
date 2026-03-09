@@ -118,14 +118,14 @@ if (projectCards.length && galleryModal) {
     galleryCounter.textContent = `${currentIndex + 1} / ${total}`;
   };
 
-  const openGallery = (card) => {
+  const openGallery = (card, startIndex = 0) => {
     currentTitle = card.dataset.galleryTitle || "Project Gallery";
     currentImages = parseList(card.dataset.galleryImages);
     currentCaptions = parseList(card.dataset.galleryCaptions);
 
     if (!currentImages.length) return;
 
-    currentIndex = 0;
+    currentIndex = Math.max(0, Math.min(startIndex, currentImages.length - 1));
     galleryTitle.textContent = currentTitle;
     renderGallery();
 
@@ -155,10 +155,19 @@ if (projectCards.length && galleryModal) {
 
   projectCards.forEach((card) => {
     const openButton = card.querySelector(".project-open");
-    if (!openButton) return;
+    const thumbButtons = [...card.querySelectorAll(".project-thumb")];
 
-    openButton.addEventListener("click", () => {
-      openGallery(card);
+    if (openButton) {
+      openButton.addEventListener("click", () => {
+        openGallery(card);
+      });
+    }
+
+    thumbButtons.forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        const startIndex = Number(thumb.dataset.galleryTrigger || "0");
+        openGallery(card, Number.isFinite(startIndex) ? startIndex : 0);
+      });
     });
   });
 
