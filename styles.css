@@ -13,6 +13,8 @@
   --radius-md: 0.9rem;
   --radius-sm: 0.6rem;
   --container: min(1140px, 92vw);
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 *,
@@ -27,10 +29,14 @@ html {
 
 body {
   margin: 0;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-sans);
+  font-weight: 400;
   background: var(--bg);
   color: var(--ink);
-  line-height: 1.6;
+  line-height: 1.58;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-image:
     radial-gradient(circle at 8% 10%, rgba(215, 25, 32, 0.1), transparent 24%),
     radial-gradient(circle at 88% 0%, rgba(168, 15, 21, 0.09), transparent 32%),
@@ -40,22 +46,23 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Rajdhani", sans-serif;
-  line-height: 1.1;
+  font-family: var(--font-display);
+  line-height: 1.14;
   margin: 0 0 0.8rem;
-  letter-spacing: 0.02em;
+  letter-spacing: -0.015em;
+  font-weight: 600;
 }
 
 h1 {
-  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  font-size: clamp(2rem, 5vw, 3.7rem);
 }
 
 h2 {
-  font-size: clamp(1.7rem, 3.8vw, 2.8rem);
+  font-size: clamp(1.55rem, 3.3vw, 2.45rem);
 }
 
 h3 {
-  font-size: clamp(1.2rem, 2.3vw, 1.55rem);
+  font-size: clamp(1.08rem, 2vw, 1.42rem);
 }
 
 p {
@@ -103,9 +110,10 @@ a {
 }
 
 .logo-text {
-  font-family: "Rajdhani", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1rem, 2vw, 1.24rem);
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .site-nav {
@@ -116,7 +124,7 @@ a {
 
 .site-nav a {
   color: var(--muted);
-  font-weight: 600;
+  font-weight: 500;
   transition: color 220ms ease;
 }
 
@@ -199,9 +207,9 @@ a {
 .eyebrow {
   display: inline-block;
   margin-bottom: 0.8rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--primary);
 }
@@ -257,7 +265,7 @@ a {
   padding: 0.66rem 1.12rem;
   border-radius: 100px;
   border: 1px solid transparent;
-  font-weight: 700;
+  font-weight: 600;
   transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, border-color 220ms ease;
 }
 
@@ -309,7 +317,7 @@ a {
 }
 
 .value {
-  font-family: "Rajdhani", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.52rem;
   font-weight: 700;
   margin: 0;
@@ -393,7 +401,7 @@ a {
 
 .market-map-title {
   margin: 0 0 0.55rem;
-  font-family: "Rajdhani", sans-serif;
+  font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
   color: #3e1d20;
@@ -794,7 +802,7 @@ a {
   height: 2rem;
   border-radius: 50%;
   margin-bottom: 0.7rem;
-  font-family: "Rajdhani", sans-serif;
+  font-family: var(--font-display);
   font-weight: 700;
   background: rgba(215, 25, 32, 0.14);
   color: var(--primary-strong);
@@ -823,9 +831,10 @@ a {
 
 .faq-list summary {
   cursor: pointer;
-  font-family: "Rajdhani", sans-serif;
-  font-size: 1.18rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1.06rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   list-style: none;
 }
 
