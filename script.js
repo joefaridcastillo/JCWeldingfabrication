@@ -80,8 +80,10 @@ if (inPageLinks.length) {
 
       event.preventDefault();
 
-      const rawTargetY =
-        target.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
+      const isBackToTop = targetId.toLowerCase() === "top";
+      const rawTargetY = isBackToTop
+        ? 0
+        : target.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
       const targetY = Math.max(0, rawTargetY);
 
       if (prefersReducedMotion) {
