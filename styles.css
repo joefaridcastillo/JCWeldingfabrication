@@ -1258,3 +1258,27 @@ a {
     display: none;
   }
 }
+
+.form-note a {
+  color: #8c1218;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.footer-links a {
+  color: #7a4f53;
+  font-weight: 600;
+  font-size: 0.86rem;
+}
+
+.footer-links a:hover {
+  color: var(--primary-strong);
+}
