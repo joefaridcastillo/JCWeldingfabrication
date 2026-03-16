@@ -1,5 +1,5 @@
 // Replace this value with your real GA4 Measurement ID, for example: G-1ABCDEF234
-const GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+const GA_MEASUREMENT_ID = "G-08112XF6D8";
 
 (() => {
   const placeholderId = "G-XXXXXXXXXX";
