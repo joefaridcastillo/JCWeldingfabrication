@@ -31,6 +31,74 @@ if (menuToggle && nav) {
   });
 }
 
+const inPageLinks = [...document.querySelectorAll('a[href^="#"]')].filter(
+  (link) => (link.getAttribute("href") || "").length > 1
+);
+
+if (inPageLinks.length) {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const easeInOutCubic = (t) =>
+    t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+  const getHeaderOffset = () => {
+    const header = document.querySelector(".site-header");
+    return header ? header.getBoundingClientRect().height + 10 : 0;
+  };
+
+  const animateScrollTo = (targetY) => {
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    const duration = Math.min(1300, Math.max(700, Math.abs(distance) * 0.75));
+    const startTime = performance.now();
+
+    const step = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOutCubic(progress);
+      const nextY = startY + distance * eased;
+
+      window.scrollTo(0, nextY);
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  };
+
+  inPageLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const href = link.getAttribute("href") || "";
+      const targetId = href.slice(1);
+      const target = targetId ? document.getElementById(targetId) : null;
+
+      if (!target) return;
+
+      event.preventDefault();
+
+      const rawTargetY =
+        target.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
+      const targetY = Math.max(0, rawTargetY);
+
+      if (prefersReducedMotion) {
+        window.scrollTo(0, targetY);
+      } else {
+        animateScrollTo(targetY);
+      }
+
+      if (history.pushState) {
+        history.pushState(null, "", `#${targetId}`);
+      } else {
+        window.location.hash = targetId;
+      }
+    });
+  });
+}
+
 const revealElements = document.querySelectorAll(".reveal");
 if (revealElements.length) {
   const revealObserver = new IntersectionObserver(
@@ -79,9 +147,7 @@ if (projectCards.length && galleryModal) {
   const galleryCounter = document.getElementById("gallery-counter");
   const prevButton = document.getElementById("gallery-prev");
   const nextButton = document.getElementById("gallery-next");
-  const closeButtons = [
-    ...galleryModal.querySelectorAll("[data-gallery-close]"),
-  ];
+  const closeButtons = [...galleryModal.querySelectorAll("[data-gallery-close]")];
 
   let currentImages = [];
   let currentCaptions = [];
