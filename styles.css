@@ -1301,3 +1301,81 @@ a {
 .footer-links a:hover {
   color: var(--primary-strong);
 }
+
+.careers-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.careers-copy p,
+.careers-copy li {
+  color: var(--muted);
+}
+
+.careers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.8rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.careers-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  font-weight: 600;
+  color: #4f2e31;
+}
+
+.careers-list li::before {
+  content: "";
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: var(--primary);
+  position: absolute;
+  left: 0;
+  top: 0.64rem;
+}
+
+.careers-form {
+  background: #fffafb;
+  border: 1px solid rgba(168, 15, 21, 0.18);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.careers-form label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #5f272b;
+}
+
+.careers-form input,
+.careers-form textarea,
+.careers-form select {
+  width: 100%;
+  border: 1px solid #e5c0c3;
+  border-radius: var(--radius-sm);
+  padding: 0.66rem 0.72rem;
+  font: inherit;
+  background: #fff;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.careers-form input:focus,
+.careers-form textarea:focus,
+.careers-form select:focus {
+  border-color: #b50f16;
+  box-shadow: 0 0 0 4px rgba(215, 25, 32, 0.15);
+  outline: none;
+}
+
+@media (min-width: 940px) {
+  .careers-grid {
+    grid-template-columns: 1fr 0.95fr;
+    align-items: start;
+  }
+}

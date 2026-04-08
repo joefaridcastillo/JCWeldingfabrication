@@ -97,6 +97,7 @@
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#market">Market</a>
+        <a href="#careers">Careers</a>
         <a href="#contact">Contact</a>
         <a class="nav-cta" href="tel:+13526788736">352-678-8736</a>
       </nav>
@@ -402,6 +403,61 @@
       <div class="container cta-grid reveal">
         <h2>Need a Florida steel subcontractor for your next commercial package?</h2>
         <a class="btn btn-primary" href="#contact">Schedule a Site Walk</a>
+      </div>
+    </section>
+
+    <section class="section" id="careers">
+      <div class="container careers-grid">
+        <div class="careers-copy reveal">
+          <p class="eyebrow">Careers</p>
+          <h2>Join Our Florida Field Team</h2>
+          <p>We are hiring reliable, safety-focused team members for commercial steel projects across Florida.</p>
+          <ul class="careers-list">
+            <li>Welder</li>
+            <li>Ironworker</li>
+            <li>Foreman</li>
+          </ul>
+          <p>If you have field experience and want to grow with a disciplined team, submit your application below.</p>
+        </div>
+
+        <form class="careers-form reveal" name="careers" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you-careers.html">
+          <input type="hidden" name="form-name" value="careers" />
+          <p hidden>
+            <label>Do not fill this out if you are human: <input name="bot-field" /></label>
+          </p>
+
+          <label for="career-name">Full Name</label>
+          <input id="career-name" name="full_name" type="text" placeholder="Your Full Name" required />
+
+          <label for="career-email">Email</label>
+          <input id="career-email" name="email" type="email" placeholder="name@email.com" required />
+
+          <label for="career-phone">Phone</label>
+          <input id="career-phone" name="phone" type="tel" placeholder="(000) 000-0000" required />
+
+          <label for="career-position">Position</label>
+          <select id="career-position" name="position" required>
+            <option value="" selected disabled>Select a position</option>
+            <option value="welder">Welder</option>
+            <option value="ironworker">Ironworker</option>
+            <option value="foreman">Foreman</option>
+          </select>
+
+          <label for="career-exp">Years of Experience</label>
+          <input id="career-exp" name="years_experience" type="number" min="0" step="0.5" placeholder="Example: 5" />
+
+          <label for="career-location">Current City and State</label>
+          <input id="career-location" name="location" type="text" placeholder="Orlando, FL" />
+
+          <label for="career-cv-link">CV/Resume Link</label>
+          <input id="career-cv-link" name="cv_link" type="url" placeholder="https://..." />
+
+          <label for="career-cv-text">Or paste your experience summary</label>
+          <textarea id="career-cv-text" name="cv_summary" rows="5" placeholder="Work history, certifications, projects, and relevant skills."></textarea>
+
+          <button type="submit" class="btn btn-primary">Submit Application</button>
+          <p class="form-note">Applications are reviewed by JC Welding &amp; Fabrication. By applying, you agree to our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>.</p>
+        </form>
       </div>
     </section>
 

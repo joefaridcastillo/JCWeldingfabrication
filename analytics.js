@@ -76,21 +76,45 @@ const GA_MEASUREMENT_ID = "G-08112XF6D8";
       trackEvent("contact_section_click", {
         link_text: linkText || "Contact CTA",
       });
+      return;
+    }
+
+    if (href === "#careers") {
+      trackEvent("careers_section_click", {
+        link_text: linkText || "Careers CTA",
+      });
     }
   });
 
-  const contactForm = document.querySelector('form[name="contact"]');
-  if (contactForm) {
-    contactForm.addEventListener("submit", () => {
-      trackEvent("contact_form_submit_attempt", {
-        form_name: "contact",
+  const formsToTrack = [
+    { name: "contact", event: "contact_form_submit_attempt" },
+    { name: "careers", event: "careers_form_submit_attempt" },
+  ];
+
+  formsToTrack.forEach((config) => {
+    const form = document.querySelector(`form[name="${config.name}"]`);
+    if (!form) return;
+
+    form.addEventListener("submit", () => {
+      trackEvent(config.event, {
+        form_name: config.name,
       });
+    });
+  });
+
+  const path = window.location.pathname;
+  if (path.endsWith("/thank-you.html") || path === "/thank-you.html") {
+    trackEvent("generate_lead", {
+      method: "website_contact_form",
     });
   }
 
-  if (window.location.pathname.endsWith("/thank-you.html") || window.location.pathname === "/thank-you.html") {
+  if (
+    path.endsWith("/thank-you-careers.html") ||
+    path === "/thank-you-careers.html"
+  ) {
     trackEvent("generate_lead", {
-      method: "website_contact_form",
+      method: "careers_application_form",
     });
   }
 
