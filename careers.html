@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers | JC Welding &amp; Fabrication LLC</title>
+  <meta name="description" content="Careers at JC Welding & Fabrication LLC. Apply for Welder, Ironworker, or Foreman positions in Florida commercial steel projects." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://jcweldingfabricationfl.com/careers.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Careers | JC Welding & Fabrication LLC" />
+  <meta property="og:description" content="Join JC Welding & Fabrication in Florida. Apply for Welder, Ironworker, and Foreman opportunities." />
+  <meta property="og:url" content="https://jcweldingfabricationfl.com/careers.html" />
+  <meta property="og:image" content="https://jcweldingfabricationfl.com/assets/jc-logo-red-white.png?v=2" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Careers | JC Welding & Fabrication LLC" />
+  <meta name="twitter:description" content="Join JC Welding & Fabrication in Florida. Apply for Welder, Ironworker, and Foreman opportunities." />
+  <meta name="twitter:image" content="https://jcweldingfabricationfl.com/assets/jc-logo-red-white.png?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=2" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="logo" href="/" aria-label="JC Welding and Fabrication home">
+        <img class="logo-image" src="assets/jc-logo-red-white.png" alt="JC Welding and Fabrication logo" width="104" height="104" decoding="async" />
+        <span class="logo-text">JC Welding &amp; Fabrication</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/#services">Services</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#about">About</a>
+        <a href="/careers.html">Careers</a>
+        <a href="/#contact">Contact</a>
+        <a class="nav-cta" href="tel:+13526788736">352-678-8736</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="service-hero careers-hero" style="--service-hero-image: url('assets/optimized/service1.jpg');">
+      <div class="container">
+        <p class="eyebrow">Careers</p>
+        <h1>Build Your Career With JC Welding</h1>
+        <p>We are growing across Florida and looking for people who take pride in safety, craftsmanship, and field execution.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container careers-story-grid">
+        <div class="careers-story-copy reveal">
+          <h2>Why Work With JC Welding</h2>
+          <p>
+            At JC Welding &amp; Fabrication, you are not just another name on a crew list. You become part of a team that values reliability,
+            accountability, and professional growth on real commercial projects. We work hard, communicate clearly, and maintain high standards
+            in the field so every team member can build long-term skills and career stability.
+          </p>
+        </div>
+        <div class="careers-story-media reveal" aria-hidden="true">
+          <img src="assets/jc-logo-red-white.png" alt="" loading="lazy" decoding="async" width="220" height="220" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="careers-apply">
+      <div class="container careers-apply-wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Application Form</p>
+          <h2>Apply for Welder, Ironworker, or Foreman</h2>
+        </div>
+
+        <form
+          class="careers-form reveal"
+          name="careers"
+          method="POST"
+          enctype="multipart/form-data"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="/thank-you-careers.html">
+          <input type="hidden" name="form-name" value="careers" />
+          <p hidden>
+            <label>Do not fill this out if you are human: <input name="bot-field" /></label>
+          </p>
+
+          <label for="career-name">Full Name</label>
+          <input id="career-name" name="full_name" type="text" placeholder="Your Full Name" required />
+
+          <label for="career-email">Email</label>
+          <input id="career-email" name="email" type="email" placeholder="name@email.com" required />
+
+          <label for="career-phone">Phone</label>
+          <input id="career-phone" name="phone" type="tel" placeholder="(000) 000-0000" required />
+
+          <label for="career-position">Position</label>
+          <select id="career-position" name="position" required>
+            <option value="" selected disabled>Select a position</option>
+            <option value="welder">Welder</option>
+            <option value="ironworker">Ironworker</option>
+            <option value="foreman">Foreman</option>
+          </select>
+
+          <label for="career-exp">Years of Experience</label>
+          <input id="career-exp" name="years_experience" type="number" min="0" step="0.5" placeholder="Example: 5" />
+
+          <label for="career-location">Current City and State</label>
+          <input id="career-location" name="location" type="text" placeholder="Orlando, FL" />
+
+          <label for="career-cv-link">CV/Resume Link (optional)</label>
+          <input id="career-cv-link" name="cv_link" type="url" placeholder="https://..." />
+
+          <label for="career-resume-file">Upload Resume (PDF, DOC, DOCX)</label>
+          <input id="career-resume-file" name="resume_file" type="file" accept=".pdf,.doc,.docx" />
+
+          <label for="career-cv-text">Or paste your experience summary</label>
+          <textarea id="career-cv-text" name="cv_summary" rows="6" placeholder="Work history, certifications, projects, and relevant skills."></textarea>
+
+          <button type="submit" class="btn btn-primary">Submit Application</button>
+          <p class="form-note">Applications are reviewed by JC Welding &amp; Fabrication. By applying, you agree to our <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/jc-logo-red-white.png" alt="JC Welding and Fabrication logo" width="56" height="56" loading="lazy" decoding="async" />
+        <p>&copy; <span id="year"></span> JC Welding &amp; Fabrication LLC. All rights reserved.</p>
+      </div>
+      <nav class="footer-links" aria-label="Legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </nav>
+      <a href="/">Back to Home</a>
+    </div>
+  </footer>
+
+  <div class="mobile-quick-actions" aria-label="Quick contact actions">
+    <a class="mobile-action mobile-action-call" href="tel:+13526788736">Call 352-678-8736</a>
+    <a class="mobile-action mobile-action-whatsapp" href="https://wa.me/13526788736?text=Hi%20JC%20Welding%20%26%20Fabrication%2C%20I%20would%20like%20a%20quote%20for%20a%20Florida%20project." target="_blank" rel="noopener noreferrer">WhatsApp Quote</a>
+  </div>
+
+  <a class="whatsapp-float" href="https://wa.me/13526788736?text=Hi%20JC%20Welding%20%26%20Fabrication%2C%20I%20would%20like%20a%20quote%20for%20a%20Florida%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">WhatsApp</a>
+
+  <script src="analytics-v2.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

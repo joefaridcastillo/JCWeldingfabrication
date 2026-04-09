@@ -1379,3 +1379,42 @@ a {
     align-items: start;
   }
 }
+
+.careers-hero {
+  padding-top: clamp(5.6rem, 10vw, 7.2rem);
+}
+
+.careers-story-grid {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.careers-story-copy p {
+  color: var(--muted);
+}
+
+.careers-story-media {
+  border: 1px solid rgba(168, 15, 21, 0.16);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, #fff, #fff4f5);
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow);
+}
+
+.careers-story-media img {
+  width: clamp(150px, 30vw, 220px);
+  height: auto;
+}
+
+.careers-apply-wrap {
+  max-width: 860px;
+}
+
+@media (min-width: 940px) {
+  .careers-story-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}

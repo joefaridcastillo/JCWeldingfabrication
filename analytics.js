@@ -79,10 +79,12 @@ const GA_MEASUREMENT_ID = "G-08112XF6D8";
       return;
     }
 
-    if (href === "#careers") {
-      trackEvent("careers_section_click", {
-        link_text: linkText || "Careers CTA",
+    if (normalizedHref.includes("careers.html") || normalizedHref === "/careers") {
+      trackEvent("careers_page_click", {
+        link_text: linkText || "Careers",
+        link_url: href,
       });
+      return;
     }
   });
 
