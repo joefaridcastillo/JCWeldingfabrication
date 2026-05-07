@@ -64,14 +64,6 @@ const GA_MEASUREMENT_ID = "G-08112XF6D8";
       return;
     }
 
-    if (normalizedHref.includes("wa.me") || normalizedHref.includes("whatsapp")) {
-      trackEvent("whatsapp_click", {
-        link_text: linkText,
-        link_url: href,
-      });
-      return;
-    }
-
     if (href === "#contact") {
       trackEvent("contact_section_click", {
         link_text: linkText || "Contact CTA",
