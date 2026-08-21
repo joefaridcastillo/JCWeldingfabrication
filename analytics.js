@@ -64,6 +64,16 @@ const GA_MEASUREMENT_ID = "G-08112XF6D8";
       return;
     }
 
+    const socialPlatform = link.dataset.socialPlatform;
+    if (socialPlatform) {
+      trackEvent("social_link_click", {
+        platform: socialPlatform,
+        link_text: linkText,
+        link_url: href,
+      });
+      return;
+    }
+
     if (href === "#contact") {
       trackEvent("contact_section_click", {
         link_text: linkText || "Contact CTA",
