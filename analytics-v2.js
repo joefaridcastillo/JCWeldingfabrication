@@ -74,6 +74,14 @@ const GA_MEASUREMENT_ID = "G-08112XF6D8";
       return;
     }
 
+    if (link.dataset.procoreProfile !== undefined) {
+      trackEvent("procore_profile_click", {
+        link_text: linkText || "Procore company profile",
+        link_url: href,
+      });
+      return;
+    }
+
     if (href === "#contact") {
       trackEvent("contact_section_click", {
         link_text: linkText || "Contact CTA",

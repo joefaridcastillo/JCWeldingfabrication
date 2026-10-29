@@ -199,6 +199,17 @@ a {
   }
 }
 
+@media (max-width: 620px) {
+  .procore-profile {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .procore-badge {
+    width: min(230px, 100%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-media {
     animation: none;
@@ -506,6 +517,62 @@ a {
   margin: 0.7rem 0 0;
   color: #766568;
   font-size: 0.72rem;
+}
+
+.procore-profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.25rem;
+  align-items: center;
+  margin-top: 1.45rem;
+  padding: 1.05rem 0 0;
+  border-top: 1px solid rgba(34, 17, 19, 0.13);
+}
+
+.procore-profile-copy .logo-group-label {
+  margin-bottom: 0.28rem;
+}
+
+.procore-profile h3 {
+  margin: 0;
+  color: #25191a;
+  font-size: clamp(1.05rem, 2.2vw, 1.28rem);
+}
+
+.procore-profile p:not(.logo-group-label) {
+  max-width: 39rem;
+  margin: 0.3rem 0 0;
+  color: #6b5759;
+  font-size: 0.9rem;
+}
+
+.procore-badge {
+  display: grid;
+  width: min(230px, 40vw);
+  min-height: 58px;
+  place-items: center;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid rgba(34, 17, 19, 0.13);
+  border-radius: 0.68rem;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(34, 17, 19, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.procore-badge img {
+  display: block;
+  width: 100%;
+  max-height: 38px;
+}
+
+.procore-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(34, 17, 19, 0.14);
+}
+
+.procore-badge:focus-visible {
+  outline: 3px solid rgba(181, 16, 28, 0.42);
+  outline-offset: 3px;
 }
 
 @keyframes logo-scroll {
